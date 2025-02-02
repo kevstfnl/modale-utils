@@ -48,3 +48,24 @@
         scale: 0;
     }
 }
+
+.toast {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    height: 100px;
+    width: 320px;
+
+    padding: 1em;
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    background-color: #46464e;
+    color: white;
+
+    transition: translate 250ms ease-in-out;
+
+    &:not([data-modale="active"]) {
+        translate: 0 -200%;
+    }
+
+}

@@ -11,3 +11,8 @@ const menuMiddle = document.getElementById("middle");
 const openMiddleButton = document.getElementById("openMiddle");
 const closeMiddleButton = document.getElementById("closeMiddle");
 new Modale(menuMiddle, openMiddleButton, closeMiddleButton);
+
+// Toast
+const toast = document.getElementById("toast");
+const toastModale = new Modale(toast);
+setInterval(() => toastModale.toggle(), 1500);

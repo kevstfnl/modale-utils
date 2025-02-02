@@ -1,10 +1,14 @@
 export default class Modale {
     modaleElement
 
-    constructor(modaleElement, openButton, closeButton) {
+    constructor(modaleElement, openButton = null, closeButton = null) {
         this.modaleElement = modaleElement;
-        openButton.addEventListener("click", this.open.bind(this));
-        closeButton.addEventListener("click", this.close.bind(this));
+        if (openButton) {
+            openButton.addEventListener("click", !closeButton ? this.toggle.bind(this) : this.open.bind(this));
+        }
+        if (closeButton) {
+            closeButton.addEventListener("click", this.close.bind(this));
+        }
     }
 
     open() {
@@ -12,5 +16,8 @@ export default class Modale {
     }
     close() {
         this.modaleElement.removeAttribute("data-modale");
+    }
+    toggle() {
+        this.modaleElement.hasAttribute("data-modale") ? this.close() : this.open()
     }
 }
