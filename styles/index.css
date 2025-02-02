@@ -1,0 +1,37 @@
+@import "reset.css";
+@import "modale.css";
+
+body {
+    background-color: #181820;
+}
+
+#app {
+    display: grid;
+    grid-template-rows: 50px 1fr 50px;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 1em;
+    background-color: #25252e;
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #25252e;
+    color: white;
+}
